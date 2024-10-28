@@ -23,7 +23,7 @@ class BowlingGame:
         is_strike = False
         for frame in self.frames:
             if is_strike:
-                score = score +  frame.is_strike()
+                score = score + frame.get_first_throw()+frame.get_second_throw()
                 is_strike = False
             if frame.is_strike():
                 is_strike = True
